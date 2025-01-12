@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.2.3/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- styling -->
+    <link rel="stylesheet" href="style.css">
+    <script src="act.js"></script>
+</head>
+<body>
+    <script>
+        applyDesktopStyles();
+        window.addEventListener('resize', applyDesktopStyles);
+    </script>
+
+    <!--Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top title" style="background-color: white">
+            
+        <!-- NAV Bar For Small Screen -->
+            <!-- Toggler button for small screen -->
+                 <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="offcanvasDarkNavbarLabel">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Branding -->            
+                <a class="navbar-brand nav-link d-lg-none position-absolute top-50 start-50 translate-middle" href="index.html"> 
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+    
+                <!-- Register Button for smaller nav -->
+                <a class="nav-item nav-link text-white btn btn-primary d-lg-none px-3 py-2 me-2" href="Register.html"> Register </a>    
+    
+                <!-- Offcanavas -->
+                <div class="offcanvas offcanvas-start text-bg-dark off d-lg-none" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <!-- Header -->
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title mx-auto h1" id="offcanvasDarkNavbarLabel">
+                            DOBU 
+                        </div>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+    
+                    <!-- Body -->
+                    <div class="offcanvas-body list-group list-group-item-light border-0" id="navmenu" style="border-top: 1px solid">
+                        <a href="index.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Home
+                        </a>
+                        <a href="Schedule.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Schedule
+                        </a>
+                        <a href="Memberships.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Memberships
+                        </a>
+                        <!-- About Us -->
+                        <a href="AboutUs.html" class="nav-link list-group-item list-group-item-action px-3 py-3">
+                            About Us <i class="fa fa-caret-down" style="padding-left: 10px"></i>
+                        </a>
+                        <!-- Facilities -->
+                        <div class="list-group list-group-item-light">
+                            <a href="Facilities.html" class="list-group-item list-group-item-action ps-5">
+                                Facilities
+                            </a>
+                        </div>
+                        <!-- Contact Us -->
+                        <a href="index.html#contact-us" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+    
+    
+        <!-- NAV Bar For Large Screen -->
+                <!-- Branding -->
+                <a class="navbar-brand nav-link d-none d-lg-block" href="index.html" >
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+                <!-- collapse in small screen -->
+                <div class="collapse navbar-collapse" id="navBarScroll">
+                        <!-- // Right align nav -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0 fs-6" style="margin-right: 70px;">
+                        <!-- Nav Items -->
+                        <li class="nav-item mx-2">  
+                            <a class="nav-link" href="index.html" id="home"> Home </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="Schedule.html"> Schedule </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="Memberships.html"> Memberships </a>
+                        </li>
+                        <!-- Drop Down -->
+                        <li class="nav-item dropdown d-flex flex-row">
+                            <a href="AboutUs.html" class="nav-link active"> About Us </a> 
+                            <button class="nav-link dropdown-toggle border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false"></button>                                                   
+                            <ul class="dropdown-menu">
+                                <li class=" dropdown-item"> 
+                                    <a href="Facilities.html" class="nav-link">Facilities</a> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="index.html#contact-us"> Contact Us </a>
+                        </li>
+                    </ul>
+                    <a class="nav-item nav-link text-white btn btn-dark px-3 py-2 d-none d-lg-block me-2" href="Register.html" > Register </a>
+                </div>
+    </nav>
+    
+    <!-- Main body -->
+    <main>
+        <!-- About Us  -->
+        <section class="container-fluid shadow bg-light mt-3">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="img/packages/about.jpg" alt="about-us-img" id="about-img">
+                </div>
+                <div class="col-lg-6 bg-white pt-1">
+                    <h4 class="fw-bold py-2 title">What's Do Bu and Who we are?</h4>
+                    <p class="about-text">
+                        DoBu Martial Arts is more than just a gym; it's a community. We are passionate about empowering people of all ages and backgrounds to discover their inner strength, build confidence, and achieve their fitness goals through the power of martial arts. Our team is comprised of experienced and dedicated instructors who are not only skilled in various martial arts disciplines but also committed to fostering a supportive and inclusive environment.
+                    </p>
+                    <p class="h4 fw-bold pb-2 title">Our Vision and Mission</p>
+                    <p class="about-text">
+                        Our mission is to empower individuals of all ages and backgrounds to discover their inner strength and achieve their full potential.  Through high-quality instruction in a variety of martial arts disciplines, we create a welcoming and inclusive environment where everyone feels valued. DoBu Martial Arts is dedicated to contributing to the overall health and well-being of our students by promoting physical fitness, mental focus, and a strong sense of community where individuals can build lasting friendships and support each other as they embark on their martial arts journeys.
+                    </p>
+               
+                    <a href="index.html#contact-us" class="d-flex flex-column justify-content-end align-items-center nav-link">
+                        <button class="btn bg-primary px-4 py-2 my-2 text-white"> Contact Us </button>
+                        
+                    </a>
+                    
+               
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Trainers -->
+        <section class="team-boxed mt-5">
+            <div class="container">
+                <div class="">
+                    <h2 class="text-start">Our Trainers </h2>
+                </div>
+                <div class="row people">
+                    <!-- 1st  -->
+                    <div class="col-md-6 col-lg-4 item mt-5">
+                        <div class="box shadow-lg h-100">
+                            <img class="rounded-circle" src="img/Trainers/MG.png" alt="Mauricio-Gomez-img">
+                            <h3 class="name">Mauricio Gomez</h3>
+                            <p class="title">Gym Owner/Head Martial Arts Coach</p>
+                            <p class="description"> <b> Qualification and Experience: </b> Coaches in all martial arts, 4<sup>th</sup> Dan Blackbelt Judo, 3<sup>rd</sup> Dan Belt Jiu-Jitsu, 1<sup>st</sup> Dan Blackbelt Karate, Accredited Muay Thai Coach.</p>
+                            <div class="social">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 2nd  -->
+                    <div class="col-md-6 col-lg-4 item mt-5">
+                        <div class="box shadow-lg h-100"><img class="rounded-circle" src="img/Trainers/SarahNova.jpg" alt="Sarah-Nova-img">
+                            <h3 class="name">Sarah Nova</h3>
+                            <p class="title">Assistant Martial Arts Coach</p>
+                            <p class="description pb-5"> <b> Qualification and Experience: </b> 5<sup>th</sup> Dan Karate  . </p>
+                            <div class="social">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>                        </div>
+                    </div>
+
+                    <!-- 3rd -->
+                    <div class="col-md-6 col-lg-4 item mt-5">
+                        <div class="box shadow-lg h-100">
+                            <img class="rounded-circle" src="img/Trainers/GuyVictory.jpg" alt="Guy-Victory-img">
+                            <h3 class="name">Guy Victory</h3>
+                            <p class="title">Assistant Martial Arts Coach</p>
+                            <p class="description pb-4"> <b> Qualification and Experience: </b> 2<sup>nd</sup> Dan Blackbelt Jiu-Jitsu, 1<sup>st</sup> Dan Blackbelt Judo. </p>
+                            <div class="social">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>                        </div>
+                    </div>
+
+                    <!-- 4th -->
+                    <div class="col-md-6 col-lg-4 item mt-5">
+                        <div class="box shadow-lg h-100">
+                            <img class="rounded-circle" src="img/Trainers/Morris.webp" alt="Morris-Davis-img">
+                            <h3 class="name">Morris Davis</h3>
+                            <p class="title"> Assistant Martial Arts Coach</p>
+                            <p class="description pb-5"> <b> Qualification and Experience: </b> Accredited Muay Thai Coach, 3<sup>rd</sup> Dan Blackbelt Judo</p>
+                            <div class="social">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>                        </div>
+                    </div>
+
+                    <!-- 5th -->
+                    <div class="col-md-6 col-lg-4 item mt-5">
+                        <div class="box shadow-lg h-100"><img class="rounded-circle" src="img/Trainers/Traci.jpg" alt="Traci-Santiago-img">
+                            <h3 class="name">Traci Santiago</h3>
+                            <p class="title">Fitness Coach</p>
+                            <p class="description"> <b> Qualification and Experience: </b> BSC in Sports Science, Qualified in health and nutrition, Specialises in devising strength and conditioning programs for combat atheletes. </p>
+                            <div class="social">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>                        </div>
+                    </div>
+
+                    <!-- 6th -->
+                    <div class="col-md-6 col-lg-4 item mt-5">
+                        <div class="box shadow-lg h-100">
+                            <img class="rounded-circle" src="img/Trainers/Harpreet.png" alt="Hapreet-Kaur-img">
+                            <h3 class="name">Harpreet Kaur</h3>
+                            <p class="title">Fitness Coach</p>
+                            <p class="description pb-5"> <b> Qualification and Experience: </b> BSC in Physiotherapy, MSC in Sports Science. </p>
+                            <div class="social">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container py-5 w-100">
+        <div class="row" style="border-top: 1px solid;">
+          
+            <!-- Social Links -->
+            <div class="col-6 col-md col-lg-4 py-3 px-4">
+                <p class="h5">Follow Us on Social Media</p>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted px-2" href="https://www.facebook.com/InABoxINC" target="_blank">
+                            <img src="img/social/facebook.png" alt="facebook-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.instagram.com/InABoxINC" target="_blank">
+                            <img src="img/social/instagram.png" alt="instagram-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/twitter.png" alt="twitter-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/tiktok.png" alt="tiktok-img" class="img-fluid social-link">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-6 col-md col-lg-4 py-3">
+                <h5> Contacts Information </h5>
+                <ul class="list-unstyled text-small">
+                <!-- Phone Number -->
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/phone_icon.png" alt="phone-icon" class="img-fluid contact-icon"> 
+                            <span class="px-2"> +969 760322209 </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/email.png" alt="gmail-icon" class="img-fluid contact-icon"> 
+                            <span class=""> DoBuMA.@gmail.com </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!-- Branding -->
+            <div class="col-12 col-md col-lg-4 py-1">
+                <img src="img/logo.png" alt="dobu-logo" class="img-fluid mx-auto d-flex flex-column justify-content-center d-none d-lg-block d-md-block" style="width: 60vh; height: 20vh;">
+            </div>
+          
+        </div>
+
+        <div class="row d-flex align-items-center" style="border-top: 1px solid;border-bottom: 1px solid;">
+            <div class="col-lg-4">
+                <p class="h6 fw-bold d-none d-lg-block d-md-block"> There's always Room for Improvement </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <p class="h6 text-muted text-center"> DoBuMartialArts@2024</p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <ul class="list-unstyled text-small text-center my-auto">
+                    <li>
+                            <img src="img/payments/visa.png" class="payment px-2" alt="visa-logo">
+                            <img src="img/payments/paypal.png" class="payment px-2" alt="paypal-logo">
+                            <img src="img/payments/jcb.png" class="payment px-2" alt="jcb-logo">
+                            <img src="img/payments/mastercard.png" class="payment px-2" alt="mastercard-logo">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.2.3/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="act.js"></script>
+    
+</head>
+<body>
+    
+    <script>
+        applyDesktopStyles();
+        window.addEventListener('resize', applyDesktopStyles);
+    </script>
+
+    <!--Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top title" style="background-color: white">
+            
+        <!-- NAV Bar For Small Screen -->
+            <!-- Toggler button for small screen -->
+                 <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="offcanvasDarkNavbarLabel">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Branding -->            
+                <a class="navbar-brand nav-link d-lg-none position-absolute top-50 start-50 translate-middle" href="index.html"> 
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+    
+                <!-- Register Button for smaller nav -->
+                <a class="nav-item nav-link text-white btn btn-primary d-lg-none px-3 py-2 me-2" href="Register.html"> Register </a>    
+    
+                <!-- Offcanavas -->
+                <div class="offcanvas offcanvas-start text-bg-dark off d-lg-none" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <!-- Header -->
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title mx-auto h1" id="offcanvasDarkNavbarLabel">
+                            DOBU 
+                        </div>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+    
+                    <!-- Body -->
+                    <div class="offcanvas-body list-group list-group-item-light border-0" id="navmenu" style="border-top: 1px solid">
+                        <a href="index.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Home
+                        </a>
+                        <a href="Schedule.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Schedule
+                        </a>
+                        <a href="Memberships.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Memberships
+                        </a>
+                        <!-- About Us -->
+                        <a href="AboutUs.html" class="nav-link list-group-item list-group-item-action px-3 py-3">
+                            About Us <i class="fa fa-caret-down" style="padding-left: 10px"></i>
+                        </a>
+                        <!-- Facilities -->
+                        <div class="list-group list-group-item-light">
+                            <a href="Facilities.html" class="list-group-item list-group-item-action ps-5">
+                                Facilities
+                            </a>
+                        </div>
+                        <!-- Contact Us -->
+                        <a href="index.html#contact-us" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+    
+    
+        <!-- NAV Bar For Large Screen -->
+                <!-- Branding -->
+                <a class="navbar-brand nav-link d-none d-lg-block" href="index.html" >
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+                <!-- collapse in small screen -->
+                <div class="collapse navbar-collapse" id="navBarScroll">
+                        <!-- // Right align nav -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0 fs-6" style="margin-right: 70px;">
+                        <!-- Nav Items -->
+                        <li class="nav-item mx-2">  
+                            <a class="nav-link" href="index.html" id="home"> Home </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="Schedule.html"> Schedule </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="Memberships.html"> Memberships </a>
+                        </li>
+                        <!-- Drop Down -->
+                        <li class="nav-item dropdown d-flex flex-row">
+                            <a href="AboutUs.html" class="nav-link"> About Us </a> 
+                            <button class="nav-link dropdown-toggle border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false"></button>                                                   
+                            <ul class="dropdown-menu">
+                                <li class=" dropdown-item"> 
+                                    <a href="Facilities.html" class="nav-link">Facilities</a> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="index.html#contact-us"> Contact Us </a>
+                        </li>
+                    </ul>
+                    <a class="nav-item nav-link text-white btn btn-dark px-3 py-2 d-none d-lg-block me-2" href="Register.html" > Register </a>
+                </div>
+        </nav>
+
+    <!-- Register Body Contents -->
+    <main class="container py-3 bg-light">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black rounded-5 shadow mt-4">
+                    <div class="card-body p-md-5">
+                        <div class="row">
+                        
+                        <!-- Signup Form  -->
+                        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 ">
+                            <p class="text-center h1 fw-bold mb-4">Sign up</p>
+                            
+                            <!-- Form Info -->
+                                
+                                <!-- Username -->
+                                <form class="form register-form mx-1 mx-auto" id="signup">
+                                
+                                <div class="input-status mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="form-field d-flex flex-row align-items-center justify-content-center mb-3">
+                                        <label class="form-label" for="username">
+                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>      
+                                        </label>
+                                        <input type="text" name="username" id="username"  placeholder="Username" autocomplete="off">
+                                    </div>
+                                    <small class="custom-small align-self-start ps-5"></small>
+                                </div>
+                                
+                                
+
+                                <!-- Email -->
+                                <div class="input-status mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="form-field d-flex flex-row align-items-center justify-content-center mb-3">
+                                        <label class="form-label" for="email">
+                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                        </label>
+                                        <input type="email" name="email" id="email" placeholder="Your Email" autocomplete="off">
+                                    </div>
+                                    <small class="custom-small align-self-start ps-5"></small>
+                                </div>
+                           
+
+                                <!-- Password -->
+                                <div class="input-status mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="form-field d-flex flex-row align-items-center justify-content-center mb-3">
+                                        <label class="form-label" for="password">
+                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        </label>
+                                        <input type="password" name="password" id="password" placeholder="password" autocomplete="off">
+                                    </div>
+                                    <small class="custom-small align-self-start ps-5"></small>
+                                </div>
+                               
+
+                                <!-- Confirm Password -->
+                                <div class="input-status mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="form-field d-flex flex-row align-items-center justify-content-center mb-3">
+                                        <label class="form-label" for="confirm-password">
+                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                        </label>
+                                        <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password" autocomplete="off">
+                                    </div>
+                                    <small></small>
+                                </div>
+                                
+
+                                <!-- Agree to TOS -->
+                                <div class="input-status ms-4 mb-3">
+                                    <input class="me-2" type="checkbox" value="" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree all statements in <a href="#!">Terms of service</a>
+                                    </label>
+                                </div>
+                                
+
+                                <!-- Submit Button -->
+                                <div class="input-status d-flex flex-column align-items-center justify-content-center mt-4">
+                                    <div class="form-field mb-3 border-0">
+                                        <input type="submit" value="Sign Up" class="btn btn-primary py-3 px-3 fs-6">
+                                    </div>
+                                </div>
+
+                                <!-- Asking to go to Login Page -->
+                                <div class="input-status d-flex flex-column align-items-center justify-content-center">
+                                    <a href="Login.html" class="d-sm-block d-lg-none pt-3 text-center"> 
+                                        Already have an account? Sign In?
+                                    </a> 
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- img -->
+                        <div class="col-md-10 col-lg-6 col-xl-7 d-flex flex-column justify-content-center align-items-center order-1 order-lg-2">
+                            <img src="https://jccindy.org/wp-content/uploads/2022/06/adult-martial-arts-classes-at-jcc.webp"
+                                class="img-fluid d-none d-lg-block d-md-block" alt="Sample image" style="width: 60vh;">
+                            <a href="Login.html" class="d-none d-lg-block pt-3"> 
+                                Already have an account?
+                            </a>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="container py-5 w-100">
+        <div class="row" style="border-top: 1px solid;">
+          
+            <!-- Social Links -->
+            <div class="col-6 col-md col-lg-4 py-3 px-4">
+                <p class="h5">Follow Us on Social Media</p>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted px-2" href="https://www.facebook.com/InABoxINC" target="_blank">
+                            <img src="img/social/facebook.png" alt="facebook-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.instagram.com/InABoxINC" target="_blank">
+                            <img src="img/social/instagram.png" alt="instagram-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/twitter.png" alt="twitter-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/tiktok.png" alt="tiktok-img" class="img-fluid social-link">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-6 col-md col-lg-4 py-3">
+                <h5> Contacts Information </h5>
+                <ul class="list-unstyled text-small">
+                <!-- Phone Number -->
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/phone_icon.png" alt="phone-icon" class="img-fluid contact-icon"> 
+                            <span class="px-2"> +969 760322209 </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/email.png" alt="gmail-icon" class="img-fluid contact-icon"> 
+                            <span class=""> DoBuMA.@gmail.com </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!-- Branding -->
+            <div class="col-12 col-md col-lg-4 py-1">
+                <img src="img/logo.png" alt="dobu-logo" class="img-fluid mx-auto d-flex flex-column justify-content-center d-none d-lg-block d-md-block" style="width: 60vh; height: 20vh;">
+            </div>
+          
+        </div>
+
+        <div class="row d-flex align-items-center" style="border-top: 1px solid;border-bottom: 1px solid;">
+            <div class="col-lg-4">
+                <p class="h6 fw-bold d-none d-lg-block d-md-block"> There's always Room for Improvement </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <p class="h6 text-muted text-center"> DoBuMartialArts@2024</p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <ul class="list-unstyled text-small text-center my-auto">
+                    <li>
+                            <img src="img/payments/visa.png" class="payment px-2" alt="visa-logo">
+                            <img src="img/payments/paypal.png" class="payment px-2" alt="paypal-logo">
+                            <img src="img/payments/jcb.png" class="payment px-2" alt="jcb-logo">
+                            <img src="img/payments/mastercard.png" class="payment px-2" alt="mastercard-logo">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="validator.js"></script>
+</body>
+</html>

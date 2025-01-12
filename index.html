@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home Page </title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.2.3/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- styling -->
+    <link rel="stylesheet" href="style.css">
+    <script src="act.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="act.js"></script> -->
+</head>
+<body>
+    
+    <script>
+        applyDesktopStyles();
+        window.addEventListener('resize', applyDesktopStyles);
+    </script>
+
+    <!--Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top title" style="background-color: white">
+            
+    <!-- NAV Bar For Small Screen -->
+        <!-- Toggler button for small screen -->
+             <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="offcanvasDarkNavbarLabel">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Branding -->            
+            <a class="navbar-brand nav-link d-lg-none position-absolute top-50 start-50 translate-middle" href="index.html"> 
+                <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+            </a>
+
+            <!-- Register Button for smaller nav -->
+            <a class="nav-item nav-link text-white btn btn-primary d-lg-none px-3 py-2 me-2" href="Register.html"> Register </a>    
+
+            <!-- Offcanavas -->
+            <div class="offcanvas offcanvas-start text-bg-dark off d-lg-none" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <!-- Header -->
+                <div class="offcanvas-header">
+                    <div class="offcanvas-title mx-auto h1" id="offcanvasDarkNavbarLabel">
+                        DOBU 
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <!-- Body -->
+                <div class="offcanvas-body list-group list-group-item-light border-0" id="navmenu" style="border-top: 1px solid">
+                    <a href="index.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                        Home
+                    </a>
+                    <a href="Schedule.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                        Schedule
+                    </a>
+                    <a href="Memberships.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                        Memberships
+                    </a>
+                    <!-- About Us -->
+                    <a href="AboutUs.html" class="nav-link list-group-item list-group-item-action px-3 py-3">
+                        About Us <i class="fa fa-caret-down" style="padding-left: 10px"></i>
+                    </a>
+                    <!-- Facilities -->
+                    <div class="list-group list-group-item-light">
+                        <a href="Facilities.html" class="list-group-item list-group-item-action ps-5">
+                            Facilities
+                        </a>
+                    </div>
+                    <!-- Contact Us -->
+                    <a href="index.html#contact-us" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+
+    <!-- NAV Bar For Large Screen -->
+            <!-- Branding -->
+            <a class="navbar-brand nav-link d-none d-lg-block" href="index.html" >
+                <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+            </a>
+            <!-- collapse in small screen -->
+            <div class="collapse navbar-collapse" id="navBarScroll">
+                    <!-- // Right align nav -->
+                <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0 fs-6" style="margin-right: 70px;">
+                    <!-- Nav Items -->
+                    <li class="nav-item mx-2">  
+                        <a class="nav-link active" href="index.html" id="home"> Home </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="Schedule.html"> Schedule </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="Memberships.html"> Memberships </a>
+                    </li>
+                    <!-- Drop Down -->
+                    <li class="nav-item dropdown d-flex flex-row">
+                        <a href="AboutUs.html" class="nav-link"> About Us </a> 
+                        <button class="nav-link dropdown-toggle border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false"></button>                                                   
+                        <ul class="dropdown-menu">
+                            <li class=" dropdown-item"> 
+                                <a href="Facilities.html" class="nav-link">Facilities</a> 
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html#contact-us"> Contact Us </a>
+                    </li>
+                </ul>
+                <a class="nav-item nav-link text-white btn btn-dark px-3 py-2 d-none d-lg-block me-2" href="Register.html" > Register </a>
+            </div>
+    </nav>
+
+    <main class="bg-light">   
+        <!-- Hero Layout -->
+        <div id="hero-section">
+            <div class="hero p-4 p-md-5 text-white img-fluid w-100">
+                <div class="col-md-6 px-0">    
+                    <h1 class="fst-italic fw-bolder">Let's build the best version<br> with DoBu</h1>
+                    <p class="lead my-3 fw-semibold">Martial Arts is not about just Fighting, <br> Its about building character.</p>
+                    <button class="btn btn-danger rounded-2" onclick="document.location='Memberships.html'"> Get Start </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body Contents -->
+        <div id="class-section">
+        <!-- Available Classes -->
+            <section class="container-fluid shadow">
+                <h3 class="fw-bold title py-4 ps-4"> What do We Offer </h3>
+                <div class="row pt-3">
+                    <!-- Normal Classes  -->
+                    <div class="col-lg-3 ">
+                        <img src="img/classes/jiu1.png" alt="kid-jiu-jitsu" class="img-fluid albumn shadow">
+                        <p class="fs-3 pt-3 fw-semibold text-center"> Jiu-Jitsu </p>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <img src="img/classes/Karate1.png" alt="karate-img" class="img-fluid albumn shadow">
+                        <p class="fs-3 pt-3 fw-semibold text-center"> Karate </p>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <img src="img/classes/Judo.png" alt="judo-img" class="img-fluid albumn shadow">
+                        <p class="fs-3 pt-3 fw-semibold text-center"> Judo </p>
+
+                    </div>
+                    <div class="col-lg-3 ">
+                        <img src="img/classes/MT1.png" alt="muay-thai-img" class="img-fluid albumn shadow">
+                        <p class="fs-3 pt-3 fw-semibold text-center"> Muay Thai </p>
+                    </div>
+                </div>
+                <!-- For Kid -->
+                <div class="row pt-3">
+                    <div class="col-lg-4">
+                        <img src="img/classes/kJit1.png " alt="kid-jiu-jitsu-img" class="img-fluid albumn ">
+                        <p class="fs-3 pt-3 fw-semibold text-center">  Kid Jiu-Jitsu </p>                     
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/classes/kKarate.png" alt="kid-karate-image" class="img-fluid albumn">
+                        <p class="fs-3 pt-3 fw-semibold text-center"> Kid Karate </p>                    
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/classes/kJudo.png" alt="kid-judo-img" class="img-fluid albumn ">
+                        <p class="fs-3 pt-3 fw-semibold text-center"> Kid Judo </p>                    
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Special OFfers -->
+        <div id="special-section">
+            <p class="h2 fw-semibold title py-4 text-center"> Special Offers From Do Bu </p>
+            
+            <section class="container" id="carousel">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- Items -->
+                    <div class="carousel-inner">
+
+                      <div class="carousel-item active bg-primary" style="background-image: url('img/SpecialOffers/self.png');">
+                        <img src="img/SpecialOffers/self1.png" alt="self-defense-course-img" class="img-fluid special-albumn">
+                        <div class="carousel-caption">
+                          <h5>Six-week beginner self-defense course</h5>
+                        </div>
+                      </div>
+
+
+                      <div class="carousel-item">
+                        <img src="img/SpecialOffers/fitnessroom.png" alt="fitness-room-img" class="img-fluid special-albumn">
+                        <div class="carousel-caption ">
+                          <h5> Fitness Room </h5>
+                        </div>
+                      </div>
+
+
+                      <div class="carousel-item">
+                        <img src="img/SpecialOffers/pft.png" alt="personal-fitness-training-img" class="img-fluid special-albumn" id="personalT">
+                        <div class="carousel-caption ">
+                          <h5>Personal Fitness Training </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Items -->
+
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+
+                  </div>
+            </section>
+
+            <p id="contact-us" class="text-white"> t </p>
+            
+            <p class="d-none d-lg-block text-white"> t</p>
+
+        <!-- Contact -->
+            <section class="container border shadow-lg mt-5 bg-dark rounded-5">
+                <div class="row">
+                    <div class="col-lg-12 contact pt-4">
+                        <h3 class="justify-content-center text-center fw-bold pt-2" style="color: #f00014;"> Contact Us at Anytime </h3>
+                    </div>
+                </div>
+                <!-- Location -->
+                <div class="row">
+                    <div class="col-lg-6 contact" style="color: rgba(0, 255, 234, 0.849);">
+                        <p class="h2 fw-bold pt-2 fs-3"> Location </p>
+                        <div class="row">
+                            <!-- Map For Large -->
+                            <div class="col-lg-12 d-none d-lg-block">
+                                <!-- <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 100%">
+                                    <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                                    style="border:0" allowfullscreen class="h-100" height="100%" width="100%"></iframe>
+                                </div> -->
+                            
+                            <!-- Map -->
+                            <div class="google-map aos-init aos-animate">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1135.3966394581867!2d96.12991428455135!3d16.826164800751098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193f1b991ff13%3A0x4eaefca376bdc769!2sHledan!5e0!3m2!1sen!2smm!4v1716401167247!5m2!1sen!2smm" height="350" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                            </div>
+
+                            <!-- Map For Small -->
+                            <div class="col-sm-12 d-lg-none pb-2">
+                                <div id="map-container-google-2" class="z-depth-1-half map-container" >
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1135.3966394581867!2d96.12991428455135!3d16.826164800751098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193f1b991ff13%3A0x4eaefca376bdc769!2sHledan!5e0!3m2!1sen!2smm!4v1716401167247!5m2!1sen!2smm" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            
+                        </div>                      
+                    </div>
+
+                    <!-- MEssage Box -->
+                    <div class="col-lg-6 contact">
+                        <p class="h2 fw-bold pt-2 ps-2 fs-3" style="color: rgba(0, 255, 234, 0.849);"> Message Us </p>
+                        <div class="container">
+                            <form>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="username" placeholder="username" required>
+                                        <label for="username">Username</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" id="email" class="form-control" placeholder="example@example.com" required>
+                                        <label for="email"> Email </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" id="subject" class="form-control" placeholder="subject" required>
+                                        <label for="subject"> Subject </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 200px" required></textarea>
+                                        <label for="floatingTextarea2"> Message Description</label>
+                                    </div>
+                                    <div class="py-2 d-flex flex-column justify-content-end align-items-center">
+                                        <button class="btn py-2 px-5 text-white" type="submit" style="background-color: #FF651C;"> Submit </button>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="container py-5 w-100">
+        <div class="row" style="border-top: 1px solid;">
+          
+            <!-- Social Links -->
+            <div class="col-6 col-md col-lg-4 py-3 px-4">
+                <p class="h5">Follow Us on Social Media</p>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted px-2" href="https://www.facebook.com/DoBuMartialArt" target="_blank">
+                            <img src="img/social/facebook.png" alt="facebook-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.instagram.com/DoBuMartialArt" target="_blank">
+                            <img src="img/social/instagram.png" alt="instagram-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.twitter.com/DoBuMartialArt" target="_blank">
+                            <img src="img/social/twitter.png" alt="twitter-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.tiktok.com/DoBuMartialArt" target="_blank">
+                            <img src="img/social/tiktok.png" alt="tiktok-img" class="img-fluid social-link">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-6 col-md col-lg-4 py-3">
+                <h5> Contacts Information </h5>
+                <ul class="list-unstyled text-small">
+                <!-- Phone Number -->
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/phone_icon.png" alt="phone-icon" class="img-fluid contact-icon"> 
+                            <span class="px-2"> +969 760322209 </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJfsctVnQnlbNqhrTrqzZJFXvcWgcpSRQtPLKfqBCgfcpVpvFnSsqlnVWdVvljbzxqcKWbB" target="_blank">
+                            <img src="img/contact/email.png" alt="gmail-icon" class="img-fluid contact-icon"> 
+                            <span> DoBuMA.@gmail.com </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!-- Branding -->
+            <div class="col-12 col-md col-lg-4 py-1">
+                <img src="img/logo.png" alt="dobu-logo" class="img-fluid mx-auto d-flex flex-column justify-content-center d-none d-lg-block d-md-block" style="width: 60vh; height: 20vh;">
+            </div>
+          
+        </div>
+
+        <div class="row d-flex align-items-center" style="border-top: 1px solid;border-bottom: 1px solid;">
+            <div class="col-lg-4">
+                <p class="h6 fw-bold d-none d-lg-block d-md-block"> There's always Room for Improvement </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <p class="h6 text-muted text-center"> DoBuMartialArts@2024</p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <ul class="list-unstyled text-small text-center my-auto">
+                    <li>
+                            <img src="img/payments/visa.png" class="payment px-2" alt="visa-logo">
+                            <img src="img/payments/paypal.png" class="payment px-2" alt="paypal-logo">
+                            <img src="img/payments/jcb.png" class="payment px-2" alt="jcb-logo">
+                            <img src="img/payments/mastercard.png" class="payment px-2" alt="mastercard-logo">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

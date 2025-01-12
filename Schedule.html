@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Schedule Page </title>
+    
+    <link rel="stylesheet" href="bootstrap-5.2.3/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="act.js"></script>
+</head>
+<body>
+    <script>
+        applyDesktopStyles();
+        window.addEventListener('resize', applyDesktopStyles);
+    </script>
+
+    <!--Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top title" style="background-color: white">
+            
+        <!-- NAV Bar For Small Screen -->
+            <!-- Toggler button for small screen -->
+                 <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="offcanvasDarkNavbarLabel">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Branding -->            
+                <a class="navbar-brand nav-link d-lg-none position-absolute top-50 start-50 translate-middle" href="index.html"> 
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+    
+                <!-- Register Button for smaller nav -->
+                <a class="nav-item nav-link text-white btn btn-primary d-lg-none px-3 py-2 me-2" href="Register.html"> Register </a>    
+    
+                <!-- Offcanavas -->
+                <div class="offcanvas offcanvas-start text-bg-dark off d-lg-none" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <!-- Header -->
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title mx-auto h1" id="offcanvasDarkNavbarLabel">
+                            DOBU 
+                        </div>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+    
+                    <!-- Body -->
+                    <div class="offcanvas-body list-group list-group-item-light border-0" id="navmenu" style="border-top: 1px solid">
+                        <a href="index.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Home
+                        </a>
+                        <a href="Schedule.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Schedule
+                        </a>
+                        <a href="Memberships.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Memberships
+                        </a>
+                        <!-- About Us -->
+                        <a href="AboutUs.html" class="nav-link list-group-item list-group-item-action px-3 py-3">
+                            About Us <i class="fa fa-caret-down" style="padding-left: 10px"></i>
+                        </a>
+                        <!-- Facilities -->
+                        <div class="list-group list-group-item-light">
+                            <a href="Facilities.html" class="list-group-item list-group-item-action ps-5">
+                                Facilities
+                            </a>
+                        </div>
+                        <!-- Contact Us -->
+                        <a href="index.html#contact-us" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+    
+    
+        <!-- NAV Bar For Large Screen -->
+                <!-- Branding -->
+                <a class="navbar-brand nav-link d-none d-lg-block" href="index.html" >
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+                <!-- collapse in small screen -->
+                <div class="collapse navbar-collapse" id="navBarScroll">
+                        <!-- // Right align nav -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0 fs-6" style="margin-right: 70px;">
+                        <!-- Nav Items -->
+                        <li class="nav-item mx-2">  
+                            <a class="nav-link" href="index.html" id="home"> Home </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" href="Schedule.html"> Schedule </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="Memberships.html"> Memberships </a>
+                        </li>
+                        <!-- Drop Down -->
+                        <li class="nav-item dropdown d-flex flex-row">
+                            <a href="AboutUs.html" class="nav-link"> About Us </a> 
+                            <button class="nav-link dropdown-toggle border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false"></button>                                                   
+                            <ul class="dropdown-menu">
+                                <li class=" dropdown-item"> 
+                                    <a href="Facilities.html" class="nav-link">Facilities</a> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="index.html#contact-us"> Contact Us </a>
+                        </li>
+                    </ul>
+                    <a class="nav-item nav-link text-white btn btn-dark px-3 py-2 d-none d-lg-block me-2" href="Register.html" > Register </a>
+                </div>
+        </nav>
+    
+  
+
+    <div class="container">
+        <div class="timetable-img text-center">
+            <img src="img/content/timetable.png" alt="">
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered texst-center">
+                <thead style="background-color: rgb(4, 124, 104);">
+                    <tr class="text-white text-center">
+                        <th class="text-uppercase table-head">Time</th>
+                        <th class="text-uppercase table-head">Monday</th>
+                        <th class="text-uppercase table-head">Tuesday</th>
+                        <th class="text-uppercase table-head">Wednesday</th>
+                        <th class="text-uppercase table-head">Thursday</th>
+                        <th class="text-uppercase table-head">Friday</th>
+                        <th class="text-uppercase table-head">Saturday</th>
+                        <th class="text-uppercase table-head">Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- 06:00-07:30 -->
+                    <tr class="text-center">
+                        <td class="align-middle">06:00 - 07:30</td>
+                        <td>
+                            <div class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13 time-cell">Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">06:00-07:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Karate</div>
+                            <div class="margin-10px-top font-size14">06:00-07:30</div>
+                        </td>
+
+                        <td>
+                            <div class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Judo</div>
+                            <div class="margin-10px-top font-size14">06:00-07:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">06:00-07:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Muay Thai</div>
+                            <div class="margin-10px-top font-size14">06:00-07:30</div>
+                        </td>
+                        <td class="bg-light-gray">
+                            <!-- No Class -->
+                        </td>
+                        <td class="bg-light-gray">
+                            <!-- No Class -->
+                        </td>
+                    </tr>
+
+                <!-- 08:00 - 10:00 -->
+                <tr class="text-center">
+                    <td class="align-middle">08:00 - 10:00</td>
+                        <td class>
+                            <div class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Muay Thai</div>
+                            <div class="margin-10px-top font-size14">08:00-10:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">08:00-10:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">08:00-10:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">08:00-10:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">08:00-10:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">08:00-10:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">08:00-10:00</div>
+                        </td>
+                
+                    </tr>
+                
+                <!-- 10:30 - 12:00 -->
+                <tr class="text-center">
+                    <td class="align-middle">10:30 - 12:00</td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">10:30 - 12:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">10:30 - 12:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">10:30 - 12:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">10:30 - 12:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">10:30 - 12:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Judo</div>
+                            <div class="margin-10px-top font-size14">10:30 - 12:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Karate</div>
+                            <div class="margin-10px-top font-size14">10:30 - 12:00</div>
+                        </td>
+                
+                    </tr>
+
+                <!-- Break -->
+                <tr class="text-center">
+                    <td class="align-middle"> 12:00 - 13:00 </td>
+                        <td>
+                            <div class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Break</div>
+                            <div class="margin-10px-top font-size14">12:00 - 13:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Break</div>
+                            <div class="margin-10px-top font-size14">12:00 - 13:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Break</div>
+                            <div class="margin-10px-top font-size14">12:00 - 13:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Break</div>
+                            <div class="margin-10px-top font-size14">12:00 - 13:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Break</div>
+                            <div class="margin-10px-top font-size14">12:00 - 13:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Break</div>
+                            <div class="margin-10px-top font-size14">12:00 - 13:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Break</div>
+                            <div class="margin-10px-top font-size14">12:00 - 13:00</div>
+                        </td>
+                    </tr>
+
+                <!-- 13:00 - 14:30 -->
+                <tr class="text-center">
+                    <td class="align-middle">13:00 - 14:30</td>
+                        <td>
+                            <div class="bg-primary padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Open Mat</div>
+                            <div class="margin-10px-top font-size14">13:00 - 14:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-primary padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Open Mat</div>
+                            <div class="margin-10px-top font-size14">13:00 - 14:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-primary padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Open Mat</div>
+                            <div class="margin-10px-top font-size14">13:00 - 14:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-primary padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Open Mat</div>
+                            <div class="margin-10px-top font-size14">13:00 - 14:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-primary padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Open Mat</div>
+                            <div class="margin-10px-top font-size14">13:00 - 14:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Karate</div>
+                            <div class="margin-10px-top font-size14">13:00 - 14:30</div>
+                        </td>
+                        <td>
+                            <div class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Judo</div>
+                            <div class="margin-10px-top font-size14">13:00 - 14:30</div>
+                        </td>
+                    </tr>
+
+                <!-- 15:00 - 17:00 -->
+                <tr class="text-center">
+                    <td class="align-middle">15:00 - 17:00</td>
+                        <td>
+                            <div class="bg-danger padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Kids Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">15:00 - 17:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-danger padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Kids Judo</div>
+                            <div class="margin-10px-top font-size14">15:00 - 17:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-danger padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Kids Karate</div>
+                            <div class="margin-10px-top font-size14">15:00 - 17:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-danger padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Kids Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">15:00 - 17:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Kids Judo</div>
+                            <div class="margin-10px-top font-size14">15:00 - 17:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Muay Thai</div>
+                            <div class="margin-10px-top font-size14">15:00 - 17:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">15:00 - 17:00</div>
+                        </td>
+                    </tr>
+
+                <!-- 17:30 - 19:00 -->
+                <tr class="text-center">
+                    <td class="align-middle">17:30 - 19:00</td>
+                        <td>
+                            <div class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell"> Karate</div>
+                            <div class="margin-10px-top font-size14">17:30 - 19:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Muay Thai</div>
+                            <div class="margin-10px-top font-size14">17:30 - 19:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Judo</div>
+                            <div class="margin-10px-top font-size14">17:30 - 19:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">17:30 - 19:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Muay Thai</div>
+                            <div class="margin-10px-top font-size14">17:30 - 19:00</div>
+                        </td>
+                        <td class="bg-light-gray">
+                            <!-- No Class -->
+                        </td>
+                        <td class="bg-light-gray">
+                            <!-- No Class -->
+                        </td>
+                    </tr>
+
+                <!-- 19:00 - 21:00 -->
+                <tr class="text-center">
+                    <td class="align-middle">19:00 - 21:00</td>
+                        <td>
+                            <div class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell"> Jiu-Jitsu </div>
+                            <div class="margin-10px-top font-size14">19:00 - 21:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Judo</div>
+                            <div class="margin-10px-top font-size14">19:00 - 21:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Jiu-Jitsu</div>
+                            <div class="margin-10px-top font-size14">19:00 - 21:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Karate</div>
+                            <div class="margin-10px-top font-size14">19:00 - 21:00</div>
+                        </td>
+                        <td>
+                            <div class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13 time-cell">Private Tution</div>
+                            <div class="margin-10px-top font-size14">19:00 - 21:00</div>
+                        </td>
+                        <td class="bg-light-gray">
+                            <!-- No Class -->
+                        </td>
+                        <td class="bg-light-gray">
+                            <!-- No Class -->
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container py-5 w-100">
+        <div class="row" style="border-top: 1px solid;">
+          
+            <!-- Social Links -->
+            <div class="col-6 col-md col-lg-4 py-3 px-4">
+                <p class="h5">Follow Us on Social Media</p>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted px-2" href="https://www.facebook.com/InABoxINC" target="_blank">
+                            <img src="img/social/facebook.png" alt="facebook-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.instagram.com/InABoxINC" target="_blank">
+                            <img src="img/social/instagram.png" alt="instagram-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/twitter.png" alt="twitter-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/tiktok.png" alt="tiktok-img" class="img-fluid social-link">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-6 col-md col-lg-4 py-3">
+                <h5> Contacts Information </h5>
+                <ul class="list-unstyled text-small">
+                <!-- Phone Number -->
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/phone_icon.png" alt="phone-icon" class="img-fluid contact-icon"> 
+                            <span class="px-2"> +969 760322209 </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/email.png" alt="gmail-icon" class="img-fluid contact-icon"> 
+                            <span class=""> DoBuMA.@gmail.com </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!-- Branding -->
+            <div class="col-12 col-md col-lg-4 py-1">
+                <img src="img/logo.png" alt="dobu-logo" class="img-fluid mx-auto d-flex flex-column justify-content-center d-none d-lg-block d-md-block" style="width: 60vh; height: 20vh;">
+            </div>
+          
+        </div>
+
+        <div class="row d-flex align-items-center" style="border-top: 1px solid;border-bottom: 1px solid;">
+            <div class="col-lg-4">
+                <p class="h6 fw-bold d-none d-lg-block d-md-block"> There's always Room for Improvement </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <p class="h6 text-muted text-center"> DoBuMartialArts@2024</p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <ul class="list-unstyled text-small text-center my-auto">
+                    <li>
+                            <img src="img/payments/visa.png" class="payment px-2" alt="visa-logo">
+                            <img src="img/payments/paypal.png" class="payment px-2" alt="paypal-logo">
+                            <img src="img/payments/jcb.png" class="payment px-2" alt="jcb-logo">
+                            <img src="img/payments/mastercard.png" class="payment px-2" alt="mastercard-logo">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

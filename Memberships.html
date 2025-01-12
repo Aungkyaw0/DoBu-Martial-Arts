@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Page</title>
+
+    <link rel="stylesheet" href="bootstrap-5.2.3/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="act.js"></script>
+</head>
+<body>
+
+
+    <script>
+        applyDesktopStyles();
+        window.addEventListener('resize', applyDesktopStyles);
+    </script>
+
+    <!--Nav Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top title" style="background-color: white">
+            
+        <!-- NAV Bar For Small Screen -->
+            <!-- Toggler button for small screen -->
+                 <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="offcanvasDarkNavbarLabel">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Branding -->            
+                <a class="navbar-brand nav-link d-lg-none position-absolute top-50 start-50 translate-middle" href="index.html"> 
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+    
+                <!-- Register Button for smaller nav -->
+                <a class="nav-item nav-link text-white btn btn-primary d-lg-none px-3 py-2 me-2" href="Register.html"> Register </a>    
+    
+                <!-- Offcanavas -->
+                <div class="offcanvas offcanvas-start text-bg-dark off d-lg-none" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <!-- Header -->
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title mx-auto h1" id="offcanvasDarkNavbarLabel">
+                            DOBU 
+                        </div>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+    
+                    <!-- Body -->
+                    <div class="offcanvas-body list-group list-group-item-light border-0" id="navmenu" style="border-top: 1px solid">
+                        <a href="index.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Home
+                        </a>
+                        <a href="Schedule.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Schedule
+                        </a>
+                        <a href="Memberships.html" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Memberships
+                        </a>
+                        <!-- About Us -->
+                        <a href="AboutUs.html" class="nav-link list-group-item list-group-item-action px-3 py-3">
+                            About Us <i class="fa fa-caret-down" style="padding-left: 10px"></i>
+                        </a>
+                        <!-- Facilities -->
+                        <div class="list-group list-group-item-light">
+                            <a href="Facilities.html" class="list-group-item list-group-item-action ps-5">
+                                Facilities
+                            </a>
+                        </div>
+                        <!-- Contact Us -->
+                        <a href="index.html#contact-us" class="nav-link nav-item list-group-item list-group-item-action px-3 py-3">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+    
+    
+        <!-- NAV Bar For Large Screen -->
+                <!-- Branding -->
+                <a class="navbar-brand nav-link d-none d-lg-block" href="index.html" >
+                    <img src="img/logo.png" class="img-fluid logo" alt="dobu-logo">
+                </a>
+                <!-- collapse in small screen -->
+                <div class="collapse navbar-collapse" id="navBarScroll">
+                        <!-- // Right align nav -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0 fs-6" style="margin-right: 70px;">
+                        <!-- Nav Items -->
+                        <li class="nav-item mx-2">  
+                            <a class="nav-link" href="index.html" id="home"> Home </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="Schedule.html"> Schedule </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" href="Memberships.html"> Memberships </a>
+                        </li>
+                        <!-- Drop Down -->
+                        <li class="nav-item dropdown d-flex flex-row">
+                            <a href="AboutUs.html" class="nav-link"> About Us </a> 
+                            <button class="nav-link dropdown-toggle border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false"></button>                                                   
+                            <ul class="dropdown-menu">
+                                <li class=" dropdown-item"> 
+                                    <a href="Facilities.html" class="nav-link">Facilities</a> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="index.html#contact-us"> Contact Us </a>
+                        </li>
+                    </ul>
+                    <a class="nav-item nav-link text-white btn btn-dark px-3 py-2 d-none d-lg-block me-2" href="Register.html" > Register </a>
+                </div>
+        </nav>
+
+    <main class="container-fluid">
+        <section class="my-3">
+            <!-- Membership Subscription -->
+            <div class="container-fluid bg-light">
+                <!-- Title -->
+                <div class="row justify-content-center pb-4 mb-3">
+                    <div class="col-md-7 heading-section text-center ftco-animate fadeInUp ftco-animated pt-4">
+                        <h2 class="fw-bold">Memberships Subscription</h2>
+                    </div>
+                </div>
+
+                <!-- Packages -->
+                <div class="row d-flex align-content-center justify-content-center">
+                    <!-- Baisc Package -->
+                    <div class="col-md-4 col-lg-3 ftco-animate fadeInUp ftco-animated mx-4">
+                        <div class="block-7 shadow-lg">
+                            <div class="card-header card-title" id="basic-pack"> 
+                                <p class="h4 text-center"> Basic Membership </p>
+                            </div>
+                            <div class="img image-style" style="background-image: url('img/packages/beginner.png');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">25</span> <sub>/mos</sub></span>
+                                <ul class="pricing-text card-body">
+                                    <li class="">1 martial art</li>
+                                    <li class="">2 session per week</li>
+                                </ul>
+                                <div class="card-footer card-title bg-secondary"> 
+                                    <a href="#" class="btn btn-primary d-block px-2 py-2">Subscribe Now</a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate Package -->
+                    <div class="col-md-4 col-lg-3 ftco-animate fadeInUp ftco-animated mx-4">
+                        <div class="block-7 shadow-lg">
+                            <div class="card-header card-title" id="intermediate-pack"> 
+                                <p class="h4 text-center"> Intermediate Membership </p>
+                            </div>
+                            <div class="img image-style" style="background-image: url('img/packages/Intermediate.png');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">35</span> <sub>/mos</sub></span>
+                                <ul class="pricing-text card-body">
+                                    <li class="">1 martial art</li>
+                                    <li class="">3 session per week</li>
+                                </ul>
+                                <div class="card-footer card-title bg-secondary"> 
+                                    <a href="#" class="btn btn-primary d-block px-2 py-2">Subscribe Now</a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Package -->
+                    <div class="col-md-4 col-lg-3 ftco-animate fadeInUp ftco-animated mx-4">
+                        <div class="block-7 shadow-lg">
+                            <div class="card-header card-title" id="advance-pack"> 
+                                <p class="h4 text-center"> Advanced Membership </p>
+                            </div>
+                            <div class="img image-style" style="background-image: url('img/packages/advance.png');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">45</span> <sub>/mos</sub></span>
+                                <ul class="pricing-text card-body">
+                                    <li class="">2 martial art</li>
+                                    <li class="">5 session per week</li>
+                                </ul>
+                                <div class="card-footer card-title bg-secondary"> 
+                                    <a href="#" class="btn btn-primary d-block px-2 py-2">Subscribe Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Remaing pac -->
+                <div class="row d-flex justify-content-center">
+                    <!-- Elite Package -->
+                    <div class="col-md-6 col-lg-3 ftco-animate fadeInUp ftco-animated mx-4">
+                        <div class="block-7 shadow-lg">
+                            <div class="card-header card-title" id="elite-pack"> 
+                                <p class="h4 text-center"> Elite Membership </p>
+                            </div>
+                            <div class="img image-style" style="background-image: url('img/packages/Elite.png');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">60</span> <sub>/mos</sub></span>
+                                <ul class="pricing-text card-body">
+                                    <li class=""> Unlimited classes</li>
+                                    <li class=""> - </li>
+                                </ul>
+                                <div class="card-footer card-title bg-secondary" id="c-footer"> 
+                                    <a href="#" class="btn btn-primary d-block py-2">Subscribe Now</a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Junior Package -->
+                    <div class="col-md-6 col-lg-3 ftco-animate fadeInUp ftco-animated mx-4">
+                        <div class="block-7 shadow-lg">
+                            <div class="card-header card-title" id="junior-pack"> 
+                                <p class="h4 text-center"> Junior Membership </p>
+                            </div>
+                            <div class="img image-style" style="background-image: url('img/packages/Junior.png');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">25</span> <sub>/mos</sub></span>
+                                <ul class="pricing-text card-body">
+                                    <li class=""> All Kid Marital Art class</li>
+                                    <li class=""> Can attend all kid session</li>
+                                </ul>
+                                <div class="card-footer card-title bg-secondary"> 
+                                    <a href="#" class="btn btn-primary d-block px-2 py-2 my-5">Subscribe Now</a>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Private Tution -->
+            <div class="row">
+                <p class="my-3 text-center" id="private-tution"> If DoBu's studnet did not catch the lesson very well or something else, studnets can take private martial arts tution and it costs £15 per hour</p>
+            </div>
+
+            <!-- Special Offers -->
+            <div class="container-fluid bg-light">
+                <!-- Title -->
+                <div class="row justify-content-center pb-4 mb-3">
+                    <div class="col-md-7 heading-section text-center ftco-animate fadeInUp ftco-animated pt-4">
+                        <p class="h2 fw-bold">Special Offers</p>
+                    </div>
+                </div>
+
+                <!-- Packages -->
+                <div class="row d-flex align-content-center justify-content-center">
+                    <!-- Self-defense  -->
+                    <div class="col-md-4 col-lg-4 ftco-animate fadeInUp ftco-animated">
+                        <div class="block-7 shadow-lg">
+                            <div id="self-defense" class="card-header card-title"> 
+                                <p class="h4 text-center"> Self-defense Course </p>
+                            </div>
+                            <div class="img image-style2" style="background-image: url('img/packages/self-def.jpg');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">180</span></span>
+                                <ul class="pricing-text card-body text-start">
+                                    <li class="card-text px-2" style="text-align: justify;">Our Beginner Self-Defense Course is designed to provide you with the fundamental skills and confidence needed to protect yourself in various situations. Over six weeks, you will engage in focused, hands-on training led by our experienced instructors. </li>
+                                </ul>
+    
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fitness Room -->
+                    <div class="col-md-4 col-lg-4 ftco-animate fadeInUp ftco-animated">
+                        <div class="block-7 shadow-lg">
+                            <div id="fitness-room" class="card-header card-title"> 
+                                <p class="h4 text-center"> Fitness Room </p>
+                            </div>
+                            <div class="img image-style2" style="background-image: url('img/packages/fitness-room.png');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">6</span> <sub>/per visit</sub></span>
+                                <ul class="pricing-text card-body text-start">
+                                    <li class="card-text px-2" style="text-align: justify;">At our Martial Art Center, we believe that physical fitness is a crucial component of effective martial arts training. Our fully equipped fitness room is designed to complement your martial arts practice, helping you to build strength, endurance, and overall physical wellness.
+
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Fitness Training -->
+                    <div class="col-md-4 col-lg-4 ftco-animate fadeInUp ftco-animated">
+                        <div class="block-7 shadow-lg">
+                            <div id="fitness-training" class="card-header card-title"> 
+                                <p class="h4 text-center"> Personal Fitness Training </p>
+                            </div>
+                            <div class="img image-style2" style="background-image: url('img/packages/personal-fitness-training.jpg');"></div>
+                            <div class="text-center">
+                                <span class="price"><sup>£</sup> <span class="number">35</span> <sub>/per hour</sub></span>
+                                <ul class="pricing-text card-body text-start">
+                                    <li class="card-text px-2 card-text-style">At our Martial Art Center, we offer specialized Personal Fitness Training designed to cater to your unique fitness goals. Our certified trainers will work closely with you to develop a customized workout plan that complements your martial arts training and enhances your overall physical fitness.</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="container py-5 w-100">
+        <div class="row" style="border-top: 1px solid;">
+          
+            <!-- Social Links -->
+            <div class="col-6 col-md col-lg-4 py-3 px-4">
+                <p class="h5">Follow Us on Social Media</p>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <a class="text-muted px-2" href="https://www.facebook.com/InABoxINC" target="_blank">
+                            <img src="img/social/facebook.png" alt="facebook-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.instagram.com/InABoxINC" target="_blank">
+                            <img src="img/social/instagram.png" alt="instagram-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/twitter.png" alt="twitter-img" class="img-fluid social-link">
+                        </a>
+                        <a class="text-muted px-2" href="https://www.pinterest.com/InABoxINC" target="_blank">
+                            <img src="img/social/tiktok.png" alt="tiktok-img" class="img-fluid social-link">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-6 col-md col-lg-4 py-3">
+                <h5> Contacts Information </h5>
+                <ul class="list-unstyled text-small">
+                <!-- Phone Number -->
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/phone_icon.png" alt="phone-icon" class="img-fluid contact-icon"> 
+                            <span class="px-2"> +969 760322209 </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-muted nav-link pt-2" href="#">
+                            <img src="img/contact/email.png" alt="gmail-icon" class="img-fluid contact-icon"> 
+                            <span class=""> DoBuMA.@gmail.com </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!-- Branding -->
+            <div class="col-12 col-md col-lg-4 py-1">
+                <img src="img/logo.png" alt="dobu-logo" class="img-fluid mx-auto d-flex flex-column justify-content-center d-none d-lg-block d-md-block" style="width: 60vh; height: 20vh;">
+            </div>
+          
+        </div>
+
+        <div class="row d-flex align-items-center" style="border-top: 1px solid;border-bottom: 1px solid;">
+            <div class="col-lg-4">
+                <p class="h6 fw-bold d-none d-lg-block d-md-block"> There's always Room for Improvement </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <p class="h6 text-muted text-center"> DoBuMartialArts@2024</p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <ul class="list-unstyled text-small text-center my-auto">
+                    <li>
+                            <img src="img/payments/visa.png" class="payment px-2" alt="visa-logo">
+                            <img src="img/payments/paypal.png" class="payment px-2" alt="paypal-logo">
+                            <img src="img/payments/jcb.png" class="payment px-2" alt="jcb-logo">
+                            <img src="img/payments/mastercard.png" class="payment px-2" alt="mastercard-logo">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
